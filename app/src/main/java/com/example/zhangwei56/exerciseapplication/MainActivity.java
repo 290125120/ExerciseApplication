@@ -1,9 +1,11 @@
 package com.example.zhangwei56.exerciseapplication;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import android.arch.lifecycle.LifecycleOwner;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements LifecycleOwner{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
