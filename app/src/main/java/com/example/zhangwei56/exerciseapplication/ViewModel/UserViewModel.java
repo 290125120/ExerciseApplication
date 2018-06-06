@@ -40,6 +40,7 @@ public class UserViewModel extends ViewModel{
                 user.setPassword("haha");
                 data.postValue(user);
                 Log.e("haha", user.getName());
+                Log.e("哈哈", Thread.currentThread().toString());
 
             }
         }).run();
