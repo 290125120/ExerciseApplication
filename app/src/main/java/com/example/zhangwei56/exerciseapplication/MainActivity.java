@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity{
                 if (user != null) {
                     textView.setText(user.getName());
                 }
-
             }
         });
     }
