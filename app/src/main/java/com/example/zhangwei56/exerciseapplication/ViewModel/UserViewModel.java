@@ -9,8 +9,7 @@ import com.example.zhangwei56.exerciseapplication.User;
 
 public class UserViewModel extends ViewModel{
     private String id = "";
-    int i = 0;
-    LiveData<User> userLiveData;
+    private LiveData<User> userLiveData;
 
     public String getId() {
         return id;
@@ -31,21 +30,13 @@ public class UserViewModel extends ViewModel{
                     e.printStackTrace();
                 }
                 User user = new User();
-                if (i == 0) {
-                    user.setName("zhangwei");
-                }else {
-                    user.setName("kongshuting");
-                }
-
+                user.setName("zhangwei");
                 user.setPassword("haha");
                 data.postValue(user);
-                Log.e("haha", user.getName());
-                Log.e("哈哈", Thread.currentThread().toString());
-
             }
         }).run();
-        i++;
-        return userLiveData = data;
+        userLiveData = data;
+        return userLiveData;
     }
 
     public void setUserLiveData(LiveData<User> userLiveData) {

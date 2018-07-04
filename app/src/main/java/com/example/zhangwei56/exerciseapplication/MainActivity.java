@@ -21,11 +21,6 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.textview1);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         UserViewModel userViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
         userViewModel.getUserLiveData().observe(this, new Observer<User>() {
             @Override
@@ -35,5 +30,10 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }
